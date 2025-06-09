@@ -7,7 +7,7 @@ csv_file = input("Masukkan nama file CSV (misal: stockx_nike.csv): ")
 
 try:
     # 1. Muat data dari file CSV
-    df = pd.read_csv('stockx_nike.csv')
+    df = pd.read_csv('output/'+csv_file)
 
     # Pastikan nama kolom 'Image URL' sudah benar
     kolom_target = 'Image URL'
@@ -25,7 +25,7 @@ try:
 
         # Tampilkan beberapa baris pertama untuk verifikasi (opsional)
         print("\nBeberapa baris pertama setelah perubahan:")
-        display(df.head())
+        # display(df.head())
 
         # 3. Simpan DataFrame yang telah dimodifikasi ke file CSV baru
         df.to_csv(nama_file_output, index=False)
